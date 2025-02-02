@@ -1,92 +1,44 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Sidebar() {
+  const router = useRouter();
+  const pathname = usePathname();
 
+  // Dynamic list of sidebar items
+  const sidebarItems = [
+    { name: 'Dashboard', icon: 'bi-grid', path: '/dashboard' },
+    { name: 'Student', icon: 'bi-person', path: '/student' },
+    { name: 'Finance', icon: 'bi-currency-rupee', path: '/finance' },
+    { name: 'Inventory', icon: 'bi-book', path: '/inventory' },
+    { name: 'Transport', icon: 'bi-bus-front', path: '/transport' },
+    { name: 'Hostel', icon: 'bi-building-fill', path: '/hostel' },
+    { name: 'Examination', icon: 'bi-mortarboard-fill', path: '/examination' },
+    { name: 'Employee', icon: 'bi-people-fill', path: '/employee' },
+    { name: 'Front Desk', icon: 'bi-pc-display-horizontal', path: '/front-desk' },
+    { name: 'Academic', icon: 'bi-buildings-fill', path: '/academic' },
+    { name: 'User & Roles', icon: 'bi-people-fill', path: '/user-roles' },
+    { name: 'Settings', icon: 'bi-gear-fill', path: '/settings' },
+  ];
+
+  // Helper function to check if the current path is active
+  const isActive = (path: string) => pathname === path;
 
   return (
-
     <aside id="sidebar" className="sidebar">
-
       <ul className="sidebar-nav" id="sidebar-nav">
-        <li className="nav-item">
-          <a className="nav-link " href="/dashboard">
-            <i className="bi bi-grid"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/student">
-            <i className="bi bi-person"></i>
-            <span>Student</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/finance">
-            <i className="bi bi-currency-rupee"></i>
-            <span>Finance</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/inventory">
-            <i className="bi bi-book"></i>
-            <span>Inventory</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/transport">
-            <i className="bi bi-bus-front"></i>
-            <span>Transport</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/hostel">
-            <i className="bi bi-building-fill"></i>
-            <span>Hostel</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/examination">
-            <i className="bi bi-mortarboard-fill"></i>
-            <span>Examination</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/employee">
-            <i className="bi bi-people-fill"></i>
-            <span>Employee</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="front-desk">
-            <i className="bi bi-pc-display-horizontal"></i>
-            <span>Front Desk</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/academic">
-            <i className="bi bi-buildings-fill"></i>
-            <span>Academic</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/user-roles">
-            <i className="bi bi-people-fill"></i>
-            <span>User & Roles</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link collapsed" href="/settings">
-            <i className="bi bi-gear-fill"></i>
-            <span>Settings</span>
-          </a>
-        </li>
-
+        {sidebarItems.map((item) => (
+          <li key={item.path} className="nav-item">
+            <Link href={item.path} className={`nav-link ${isActive(item.path) ? 'active' : ''}`}>
+              <i className={`bi ${item.icon}`}></i>
+              <span>{item.name}</span>
+            </Link>
+          </li>
+        ))}
       </ul>
     </aside>
-
   );
 }

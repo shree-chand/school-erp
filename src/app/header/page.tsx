@@ -8,9 +8,9 @@ export default function Header() {
                 <header id="header" className="header fixed-top d-flex align-items-center">
 
                     <div className="d-flex align-items-center justify-content-between">
-                        <a href="index.html" className="logo d-flex align-items-center">
-                            <img src="assets/img/logo.png" alt="" />
-                            <span className="d-none d-lg-block">Gro School ERP</span>
+                    <i className="bi bi-list toggle-sidebar-btn"></i>
+                        <a href="/dashboard" className="logo d-flex align-items-center">
+                            <img src="/image/logo.png" alt="" />
                         </a>
                         <i className="bi bi-list toggle-sidebar-btn"></i>
                     </div>
@@ -124,7 +124,7 @@ export default function Header() {
 
                                     <li className="message-item">
                                         <a href="#">
-                                            <img src="assets/img/messages-1.jpg" alt="" className="rounded-circle" />
+                                            <img src="/image/messages-1.jpg" alt="" className="rounded-circle" />
                                             <div>
                                                 <h4>Maria Hudson</h4>
                                                 <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -138,7 +138,7 @@ export default function Header() {
 
                                     <li className="message-item">
                                         <a href="#">
-                                            <img src="assets/img/messages-2.jpg" alt="" className="rounded-circle" />
+                                            <img src="/image/messages-2.jpg" alt="" className="rounded-circle" />
                                             <div>
                                                 <h4>Anna Nelson</h4>
                                                 <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -152,7 +152,7 @@ export default function Header() {
 
                                     <li className="message-item">
                                         <a href="#">
-                                            <img src="assets/img/messages-3.jpg" alt="" className="rounded-circle" />
+                                            <img src="/image/messages-3.jpg" alt="" className="rounded-circle" />
                                             <div>
                                                 <h4>David Muldon</h4>
                                                 <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -175,7 +175,7 @@ export default function Header() {
                             <li className="nav-item dropdown pe-3">
 
                                 <a className="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                                    <img src="" alt="Profile" className="rounded-circle" />
+                                    <img src="/image/profile-img.jpg" alt="Profile" className="rounded-circle" />
                                     <span className="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                                 </a>
 
