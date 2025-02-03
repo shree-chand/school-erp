@@ -1289,3 +1289,32 @@ a{
   font-size: 14px !important;
   font-weight: normal;
 }
+.label {
+  font-size: 14px;
+}
+.form-group {
+  margin-bottom: 1rem; /* Adds space between form groups */
+}
+
+.form-group label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #007bff; /* Highlight border color on focus */
+  outline: none; /* Remove default outline */
+}

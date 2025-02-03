@@ -78,17 +78,14 @@ export default function Dashboard() {
       </main>
       {/* --student list modal-- */}
       {isModalOpen && (
-        <div
-          id="default-modal"
-          aria-hidden="true"
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+        <div id="default-modal" aria-hidden="true" className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
           <div className="relative p-2 w-full max-w-2xl max-h-full bg-white rounded-lg">
             {/* Modal content */}
             <div className="relative bg-white rounded-lg">
               {/* Modal header */}
               <div className="flex items-center justify-between p-2 md:p-5 border-b rounded-t">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Terms of Service
+                  Sudent List
                 </h3>
                 <button
                   type="button"
@@ -96,26 +93,44 @@ export default function Dashboard() {
                   className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
                 >
                   <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                   </svg>
                   <span className="sr-only">Close modal</span>
                 </button>
               </div>
               {/* Modal body */}
-              <div className="p-4 md:p-5 space-y-4">
-                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                </p>
-                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                  The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                </p>
+              <div className="p-2 grid grid-cols-3 gap-4">
+                <div className="form-group">
+                  <label className="form-label">Serial No.</label>
+                  <input type="text" className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Name</label>
+                  <input type="text" className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Registerd No.</label>
+                  <input type="text" className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Class Name</label>
+                  <input type="text" className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Section</label>
+                  <input type="text" className="form-control" />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Contact</label>
+                  <input type="text" className="form-control" />
+                </div>
               </div>
               {/* Modal footer */}
               <div className="flex items-center p-4 justify-content-end">
                 <button onClick={closeModal} type="button" className="btn btn-danger me-2">
                   Close
                 </button>
-                <button onClick={closeModal}  type="button" className="btn btn-primary">
+                <button onClick={closeModal} type="button" className="btn btn-primary">
                   Save
                 </button>
               </div>
