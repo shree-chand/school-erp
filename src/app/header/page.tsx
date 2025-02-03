@@ -1,20 +1,17 @@
 'use-clint'
 
-export default function Header() {
+export default function Header({ toggleSidebar }: { toggleSidebar: () => void }) {
 
     return (
         <>
             <div className="mainHeader">
                 <header id="header" className="header fixed-top d-flex align-items-center">
-
                     <div className="d-flex align-items-center justify-content-between">
-                    <i className="bi bi-list toggle-sidebar-btn"></i>
+                    <i className="bi bi-list toggle-sidebar-btn" onClick={toggleSidebar}></i>
                         <a href="/dashboard" className="logo d-flex align-items-center">
                             <img src="/image/logo.png" alt="" />
                         </a>
-                        <i className="bi bi-list toggle-sidebar-btn"></i>
                     </div>
-
                     <div className="search-bar">
                         <form className="search-form d-flex align-items-center" method="POST" action="#">
                             <input type="text" name="query" placeholder="Search" title="Enter search keyword" />

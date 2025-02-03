@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
 import Sidebar from './sidebar/page';
@@ -6,11 +7,14 @@ import Header from "./header/page"
 import Footer from './footer/page';
 
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: Readonly<{ children: React.ReactNode;}>) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to manage sidebar visibility
+
+  // Function to toggle sidebar visibility
+  const toggleSidebar = () => {
+    setIsSidebarOpen(prevState => !prevState);
+  };
+  
   return (
     <html lang="en">
       <head>
@@ -22,11 +26,11 @@ export default function RootLayout({
       </head>
       <body>
         <div className="outerMainPage">
-          <div className="leftMain">
+          <div className={`leftMain ${isSidebarOpen ? 'open' : ''}`}>
             <Sidebar />
           </div>
-          <div className="rightMain">
-            <Header />
+          <div className={`rightMain ${isSidebarOpen ? 'withSidebar' : ''}`}>
+            <Header toggleSidebar={toggleSidebar}/>
             {children}
             <Footer/>
           </div>
