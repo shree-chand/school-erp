@@ -34,7 +34,6 @@ export default function Dashboard() {
                       <button type="button" className="btn btn-primary"><i className="bi bi-x-circle-fill"></i></button>
                     </div>
                   </div>
-
                   <div className="table-responsive outerTable">
                     <table className="table table-striped table-hover">
                       <thead>
@@ -99,7 +98,7 @@ export default function Dashboard() {
                 </button>
               </div>
               {/* Modal body */}
-              <div className="p-2 grid grid-cols-3 gap-4">
+              <div className="p-4 grid grid-cols-2 gapX">
                 <div className="form-group">
                   <label className="form-label">Serial No.</label>
                   <input type="text" className="form-control" />

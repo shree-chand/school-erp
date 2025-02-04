@@ -1318,3 +1318,6 @@ a{
   border-color: #007bff; /* Highlight border color on focus */
   outline: none; /* Remove default outline */
 }
+.gapX{
+  gap: 0 15px;
+}
