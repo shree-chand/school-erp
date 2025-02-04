@@ -27,10 +27,10 @@ export default function Dashboard() {
             <div className="col-lg-12">
               <div className="card">
                 <div className="card-body">
-                  <div className="flexTitle">
+                <div className="flexTitle">
                     <h2 className="card-title">Student List</h2>
                     <div className="rightBtn">
-                      <button type="button" className="btn btn-primary me-2" onClick={toggleModal}><i className="bi bi-plus-circle"></i>Student</button>
+                      <button type="button" className="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="bi bi-plus-circle"></i>Student</button>
                       <button type="button" className="btn btn-primary"><i className="bi bi-x-circle-fill"></i></button>
                     </div>
                   </div>
@@ -75,68 +75,61 @@ export default function Dashboard() {
           </div>
         </section>
       </main>
-      {/* --student list modal-- */}
-      {isModalOpen && (
-        <div id="default-modal" aria-hidden="true" className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-          <div className="relative p-2 w-full max-w-2xl max-h-full bg-white rounded-lg">
-            {/* Modal content */}
-            <div className="relative bg-white rounded-lg">
-              {/* Modal header */}
-              <div className="flex items-center justify-between p-2 md:p-5 border-b rounded-t">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Sudent List
-                </h3>
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
-                >
-                  <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                  </svg>
-                  <span className="sr-only">Close modal</span>
-                </button>
-              </div>
-              {/* Modal body */}
-              <div className="p-4 grid grid-cols-2 gapX">
-                <div className="form-group">
-                  <label className="form-label">Serial No.</label>
-                  <input type="text" className="form-control" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Name</label>
-                  <input type="text" className="form-control" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Registerd No.</label>
-                  <input type="text" className="form-control" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Class Name</label>
-                  <input type="text" className="form-control" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Section</label>
-                  <input type="text" className="form-control" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Contact</label>
-                  <input type="text" className="form-control" />
-                </div>
-              </div>
-              {/* Modal footer */}
-              <div className="flex items-center p-4 justify-content-end">
-                <button onClick={closeModal} type="button" className="btn btn-danger me-2">
-                  Close
-                </button>
-                <button onClick={closeModal} type="button" className="btn btn-primary">
-                  Save
-                </button>
-              </div>
+      {/* start modal-- */}
+      <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog modal-dialog-scrollable">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h1 className="modal-title fs-5" id="exampleModalLabel">Student List</h1>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="form-group">
+            <label className="form-label">Serial No.</label>
+            <input type="text" className="form-control" />
+            </div>
+          </div>
+          <div className="col-sm-12">
+            <div className="form-group">
+            <label className="form-label">Name</label>
+            <input type="text" className="form-control" />
+            </div>
+          </div>
+          <div className="col-sm-12">
+            <div className="form-group">
+            <label className="form-label">Registerd No.</label>
+            <input type="text" className="form-control" />
+            </div>
+          </div>
+          <div className="col-sm-12">
+            <div className="form-group">
+            <label className="form-label">Class Name</label>
+            <input type="text" className="form-control" />
+            </div>
+          </div>
+          <div className="col-sm-12">
+            <div className="form-group">
+            <label className="form-label">Section</label>
+            <input type="text" className="form-control" />
+            </div>
+          </div>
+          <div className="col-sm-12">
+            <div className="form-group">
+            <label className="form-label">Contact</label>
+            <input type="text" className="form-control" />
             </div>
           </div>
         </div>
-      )}
+      </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
     </>
   );
 }
