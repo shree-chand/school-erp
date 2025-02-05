@@ -210,14 +210,16 @@ h6 {
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
-.card-body{
-  .flexTitle{
+
+.card-body {
+  .flexTitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
   }
 }
+
 .card-header,
 .card-footer {
   border-color: #ebeef4;
@@ -239,11 +241,13 @@ h6 {
   font-size: 14px;
   font-weight: 400;
 }
-.card.info-card{
-  .card-title{
+
+.card.info-card {
+  .card-title {
     margin-bottom: 5px;
   }
 }
+
 .card-img-overlay {
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -351,12 +355,6 @@ h6 {
 .logo {
   line-height: 1;
 }
-
-/* @media (min-width: 1200px) {
-  .logo {
-    width: 280px;
-  }
-} */
 
 .logo img {
   max-height: 26px;
@@ -489,28 +487,32 @@ h6 {
   inset: 8px -15px auto auto !important;
 }
 
-.header-nav .notifications .notification-item {
-  display: flex;
-  align-items: center;
-  padding: 15px 10px;
-  transition: 0.3s;
-}
+.header-nav {
+  .notifications {
+    .notification-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      transition: 0.3s;
 
-.header-nav .notifications .notification-item i {
-  margin: 0 20px 0 10px;
-  font-size: 24px;
-}
+      h4 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
 
-.header-nav .notifications .notification-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
+      p {
+        font-size: 13px;
+        margin-bottom: 3px;
+        color: #919191;
+      }
 
-.header-nav .notifications .notification-item p {
-  font-size: 13px;
-  margin-bottom: 3px;
-  color: #919191;
+      i {
+        margin: 0 20px 0 10px;
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 .header-nav .notifications .notification-item:hover {
@@ -588,49 +590,6 @@ h6 {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
-/* .sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  z-index: 996;
-  transition: all 0.3s;
-  padding: 0px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #aab7cf transparent;
-  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
-  transition: transform 0.3s ease-in-out;
-}
-.leftMain.open > .sidebar{
-  width: 50px;
-}
-.leftMain.open{
-  transition: margin-left 0.3s ease;
-}
-.rightMain {
-  margin-left: 0;
-  transition: margin-left 0.3s ease;
-}
-
-.rightMain.withSidebar {
-  margin-left: 50px; 
-}
-
-.leftMain {
-  position: relative;
-  z-index: 999; 
-  transition: margin-left 0.3s ease;
-} */
-
-/* @media (max-width: 1199px) {
-  .sidebar {
-    left: -250px;
-  }
-} */
-
 .sidebar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
@@ -640,37 +599,6 @@ h6 {
 .sidebar::-webkit-scrollbar-thumb {
   background-color: #aab7cf;
 }
-
-/* @media (min-width: 1200px) {
-  .main {
-    margin-left: 250px;
-  }
-    
-  .rightMain.withSidebar{
-    .main{
-      margin-left: 0px !important;
-      transition: margin-left 0.3s ease;
-    }
-  }
-} */
-/* 
-@media (max-width: 1199px) {
-  .toggle-sidebar .sidebar {
-    left: 0;
-  }
-} */
-
-/* @media (min-width: 1200px) {
-
-  .toggle-sidebar #main,
-  .toggle-sidebar #footer {
-    margin-left: 0;
-  }
-
-  .toggle-sidebar .sidebar {
-    left: -250px;
-  }
-} */
 
 .sidebar-nav {
   padding: 0;
@@ -713,19 +641,23 @@ h6 {
   margin-right: 15px;
   color: #4154f1;
 }
-.nav-link.active{
-  i{
+
+.nav-link.active {
+  i {
     color: #4154f1 !important;
   }
 }
+
 .sidebar-nav .nav-link {
   color: #012970;
   background: #fff;
 }
+
 .sidebar-nav .nav-link.active {
   color: #4154f1;
   background: #f6f9ff;
 }
+
 .sidebar-nav .nav-link i {
   color: #899bbd;
 }
@@ -1266,31 +1198,37 @@ h6 {
 
 /* ------------------- */
 /* Sidebar Styling */
-.rightBtn{
-  .bi-plus-circle{
+.rightBtn {
+  .bi-plus-circle {
     margin-right: 5px;
     font-size: 14px;
   }
 }
-.bi-trash{
+
+.bi-trash {
   color: red;
 }
-a{
+
+a {
   cursor: pointer;
 }
-.table thead th{
+
+.table thead th {
   font-size: 14px;
   font-weight: 600;
 }
-.table tbody td{
+
+.table tbody td {
   font-size: 14px !important;
   font-weight: normal;
 }
+
 .label {
   font-size: 14px;
 }
+
 .form-group {
-  margin-bottom: 1rem; /* Adds space between form groups */
+  margin-bottom: 1rem;
 }
 
 .form-group label {
@@ -1312,9 +1250,10 @@ a{
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  border-color: #007bff; /* Highlight border color on focus */
-  outline: none; /* Remove default outline */
+  border-color: #007bff;
+  outline: none;
 }
+
 .btn {
   padding: 7px 15px;
   font-size: 14px;
@@ -1323,15 +1262,17 @@ a{
   border: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.outerMainPage{
+
+.outerMainPage {
   display: flex;
   height: 100vh;
   overflow: hidden;
 }
+
 .leftMain {
   width: 250px;
   margin-top: 60px;
-  background: #fff; 
+  background: #fff;
   transition: .3s ease;
   z-index: 9;
   overflow-y: auto;
@@ -1340,18 +1281,55 @@ a{
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
   background-color: #fff;
 }
+
 .rightMain {
   width: calc(100% - 250px);
   transition: .3s ease;
 }
-.rightMain.withSidebar{
+
+.rightMain.withSidebar {
   width: calc(100% - 0px);
 }
-.leftMain.close{
+
+.leftMain.close {
   width: 47px;
   overflow-x: hidden;
 }
-section{
+
+section {
   background-color: white;
   border-radius: 6px;
+}
+
+.FormOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .card {
+    border-radius: 8px;
+
+    .card-body {
+      padding: 35px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-check-label {
+      font-size: 14px;
+    }
+  }
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.h40 {
+  height: 40px;
 }
