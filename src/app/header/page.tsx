@@ -5,23 +5,21 @@ export default function Header({ toggleSidebar }: { toggleSidebar: () => void })
     return (
         <>
             <div className="mainHeader">
-                <header id="header" className="header fixed-top d-flex align-items-center">
+                <header id="header" className="header fixed-top">
                     <div className="d-flex align-items-center justify-content-between">
                         <i className="bi bi-list toggle-sidebar-btn" onClick={toggleSidebar}></i>
                         <a href="/dashboard" className="logo d-flex align-items-center">
-                            {/* <img src="/image/logo.png" alt="" /> */}
+                            <img src="/image/logo.png" alt="" />
                         </a>
                     </div>
-                    <div className="search-bar">
-                        <form className="search-form d-flex align-items-center" method="POST" action="#">
-                            <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
-                            <button type="submit" title="Search"><i className="bi bi-search"></i></button>
-                        </form>
-                    </div>
-
                     <nav className="header-nav ms-auto">
+                        <div className="search-bar">
+                            <form className="search-form d-flex align-items-center" method="POST" action="#">
+                                <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
+                                <button type="submit" title="Search"><i className="bi bi-search"></i></button>
+                            </form>
+                        </div>
                         <ul className="d-flex align-items-center">
-
                             <li className="nav-item d-block d-lg-none">
                                 <a className="nav-link nav-icon search-bar-toggle " href="#">
                                     <i className="bi bi-search"></i>
@@ -225,8 +223,6 @@ export default function Header({ toggleSidebar }: { toggleSidebar: () => void })
                                     </li>
                                 </ul>
                             </li>
-
-
                         </ul>
                     </nav>
                 </header>

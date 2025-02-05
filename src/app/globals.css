@@ -205,8 +205,9 @@ h6 {
 
 /* Card */
 .card {
-  margin-bottom: 0px;
+  margin-bottom: 15px;
   border: none;
+  min-height: 100px;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
@@ -368,13 +369,34 @@ h6 {
   font-family: "Nunito", sans-serif;
 }
 
-.header {
-  transition: all 0.5s;
-  z-index: 997;
-  height: 60px;
-  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+.mainHeader {
+  .header {
+    transition: all 0.5s;
+    z-index: 997;
+    height: 60px;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-nav {
+      display: flex;
+
+      .search-bar {
+        min-width: 360px;
+        padding: 0 20px;
+
+        .search-form {
+          input {
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
 }
+
 
 .header .toggle-sidebar-btn {
   font-size: 28px;
@@ -383,10 +405,6 @@ h6 {
   color: #012970;
 }
 
-.header .search-bar {
-  min-width: 360px;
-  padding: 0 20px;
-}
 
 @media (max-width: 1199px) {
   .header .search-bar {
@@ -1266,7 +1284,6 @@ a {
 .outerMainPage {
   display: flex;
   height: 100vh;
-  overflow: hidden;
 }
 
 .leftMain {
@@ -1294,11 +1311,6 @@ a {
 .leftMain.close {
   width: 47px;
   overflow-x: hidden;
-}
-
-section {
-  background-color: white;
-  border-radius: 6px;
 }
 
 .FormOuter {
