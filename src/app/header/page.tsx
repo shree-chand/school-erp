@@ -9,7 +9,7 @@ export default function Header({ toggleSidebar }: { toggleSidebar: () => void })
                     <div className="d-flex align-items-center justify-content-between">
                         <i className="bi bi-list toggle-sidebar-btn" onClick={toggleSidebar}></i>
                         <a href="/dashboard" className="logo d-flex align-items-center">
-                            <img src="/image/logo.png" alt="" />
+                            {/* <img src="/image/logo.png" alt="" /> */}
                         </a>
                     </div>
                     <div className="search-bar">
