@@ -1,4 +1,23 @@
-export default function Login() {
+'use client';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+interface LoginProps {
+    onLoginSuccess: () => void;
+}
+
+export default function Login({ onLoginSuccess }: LoginProps) {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const router = useRouter();
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (username && password) {
+            onLoginSuccess();
+            router.push('/dashboard');
+        } else {
+            alert("Please enter both username and password.");
+        }
+    };
     return (
         <main>
             <div className="FormOuter">
@@ -8,14 +27,21 @@ export default function Login() {
                             <div className="card mb-3">
                                 <div className="card-body">
                                     <h2 className="card-title">Login</h2>
-                                    <form className="groFrom needs-validation">
+                                    <form className="groFrom needs-validation" onSubmit={handleSubmit}>
                                         <div className="row">
                                             <div className="col-12">
                                                 <div className="form-group">
                                                     <label className="form-label">Username</label>
                                                     <div className="input-group has-validation">
                                                         <span className="input-group-text" id="inputGroupPrepend">@</span>
-                                                        <input type="text" name="username" className="form-control" id="yourUsername" required />
+                                                        <input
+                                                            type="text"
+                                                            name="username"
+                                                            className="form-control"
+                                                            id="yourUsername"
+                                                            value={username}
+                                                            onChange={(e) => setUsername(e.target.value)}
+                                                        />
                                                         <div className="invalid-feedback">Please enter your username.</div>
                                                     </div>
                                                 </div>
@@ -23,7 +49,14 @@ export default function Login() {
                                             <div className="col-12">
                                                 <div className="form-group">
                                                     <label className="form-label">Password</label>
-                                                    <input type="password" name="password" className="form-control" id="yourPassword" required />
+                                                    <input
+                                                        type="password"
+                                                        name="password"
+                                                        className="form-control"
+                                                        id="yourPassword"
+                                                        value={password}
+                                                        onChange={(e) => setPassword(e.target.value)} // Updating password state
+                                                    />
                                                     <div className="invalid-feedback">Please enter your password!</div>
                                                 </div>
                                             </div>
