@@ -1,6 +1,6 @@
 'use-clint'
 
-export default function Dashboard() {
+export default function PageOne() {
 
   return (
     <>
@@ -11,7 +11,7 @@ export default function Dashboard() {
               <div className="card">
                 <div className="card-body">
                   <div className="flexTitle">
-                    <h2 className="card-title">Academic</h2>
+                    <h2 className="card-title">Page One</h2>
                     <div className="rightBtn">
                       <button type="button" className="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="bi bi-plus-circle"></i>Student</button>
                       <button type="button" className="btn btn-primary"><i className="bi bi-x-circle-fill"></i></button>

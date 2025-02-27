@@ -8,7 +8,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #ECECEC;
+  background: #e9f2f8;
   color: #444444;
 }
 
@@ -673,7 +673,7 @@ h6 {
 
 .sidebar-nav .nav-link.active {
   color: #4154f1;
-  background: #f6f9ff;
+  background: #0077bd1a;
 }
 
 .sidebar-nav .nav-link i {
@@ -682,7 +682,7 @@ h6 {
 
 .sidebar-nav .nav-link:hover {
   color: #4154f1;
-  background: #f6f9ff;
+  background: #0077bd1a;
 }
 
 .sidebar-nav .nav-link:hover i {
@@ -1190,7 +1190,7 @@ h6 {
 .footer {
   padding: 10px 15px 10px;
   background: #ececec;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1344,4 +1344,13 @@ a {
 
 .h40 {
   height: 40px;
+}
+.dropdown-nav.subList{
+  padding-left: 34px;
+  .nav-item{
+    a{
+      font-size: 14px;
+      padding: 0 10px 5px;
+    }
+  }
 }
