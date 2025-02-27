@@ -8,7 +8,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #e9f2f8;
+  background: #ECECEC;
   color: #444444;
 }
 
@@ -673,7 +673,7 @@ h6 {
 
 .sidebar-nav .nav-link.active {
   color: #4154f1;
-  background: #0077bd1a;
+  background: #f6f9ff;
 }
 
 .sidebar-nav .nav-link i {
@@ -682,7 +682,7 @@ h6 {
 
 .sidebar-nav .nav-link:hover {
   color: #4154f1;
-  background: #0077bd1a;
+  background: #f6f9ff;
 }
 
 .sidebar-nav .nav-link:hover i {
